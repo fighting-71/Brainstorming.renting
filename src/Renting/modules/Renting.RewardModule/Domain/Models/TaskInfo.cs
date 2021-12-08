@@ -31,5 +31,7 @@ namespace Renting.Reward.Domain.Models
 		public string Remark { get; set; }
 		public string Tags { get; set; }
 		public int RewardCount { get; set; }
+		public decimal? MaxDiff { get; set; }
+		public decimal? MaxRange { get; set; }
     }
 }

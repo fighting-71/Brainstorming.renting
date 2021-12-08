@@ -11,7 +11,7 @@ namespace Renting.Reward.Services
 	/// @auth : monster
 	/// @since : 12/8/2021 3:08:23 PM
 	/// @source : 
-	/// @des : 
+	/// @des : 任务完成处理器
 	/// </summary>
 	public interface ITaskCompletedHandler
     {

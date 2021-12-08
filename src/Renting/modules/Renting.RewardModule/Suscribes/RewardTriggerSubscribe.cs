@@ -16,7 +16,7 @@ namespace Renting.Reward.Suscribes
 	/// @auth : monster
 	/// @since : 12/8/2021 2:07:11 PM
 	/// @source : 
-	/// @des : 
+	/// @des : 通过操作触发奖励机制
 	/// </summary>
     [Subscription("reward.trigger.by.action")]
 	public class RewardTriggerSubscribe : IMQSubscribe<NewActionMessage>

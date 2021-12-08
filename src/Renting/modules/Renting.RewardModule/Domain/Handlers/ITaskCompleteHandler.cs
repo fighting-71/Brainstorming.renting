@@ -18,8 +18,20 @@ namespace Renting.Reward.Domain.Handlers
     {
 		Task<List<TaskCompleteDto>> RunAsync(TaskInfo taskInfo, ActionInfo actionInfo);
     }
+	/// <summary>
+	/// 简单次数触发
+	/// </summary>
 	public interface ITriggerTaskCompleteHandler : ITaskCompleteHandler { }
+	/// <summary>
+	/// 差值触发
+	/// </summary>
 	public interface IDiffTaskCompleteHandler : ITaskCompleteHandler { }
+	/// <summary>
+	/// 范围差触发
+	/// </summary>
 	public interface IRangeTaskCompleteHandler : ITaskCompleteHandler { }
+	/// <summary>
+	/// 无需检查的触发
+	/// </summary>
 	public interface INoCheckTaskCompleteHandler : ITaskCompleteHandler { }
 }

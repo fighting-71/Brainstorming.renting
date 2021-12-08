@@ -11,13 +11,22 @@ namespace Renting.Reward.Services
 	/// @auth : monster
 	/// @since : 12/8/2021 2:27:23 PM
 	/// @source : 
-	/// @des : 
+	/// @des : 奖励相关
 	/// </summary>
 	public interface IRewardService
     {
-
+		/// <summary>
+		/// 通过id获取有效的操作记录
+		/// </summary>
+		/// <param name="actionId"></param>
+		/// <returns></returns>
 		Task<ActionInfo> GetActionAsync(Guid actionId);
 
+		/// <summary>
+		/// 通过操作记录获取对应的任务
+		/// </summary>
+		/// <param name="actionInfo"></param>
+		/// <returns></returns>
 		Task<TaskInfo[]> GetTasksAsync(ActionInfo actionInfo);
 
     }
