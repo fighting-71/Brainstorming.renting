@@ -13,6 +13,7 @@ namespace Renting.Match.Models
 	/// </summary>
 	public class BaseIssuerInfo
     {
+        public Guid UserId { get; set; }
         public Guid Id { get; set; }
         public int RentByMonth { get; set; }
         public int Rent { get; set; }
@@ -22,7 +23,6 @@ namespace Renting.Match.Models
         public int Room { get; set; }
         public int BathRoom { get; set; }
         public string Remark { get; set; }
-
         /// <summary>
         /// 检索key
         /// </summary>

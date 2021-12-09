@@ -1,12 +1,10 @@
-﻿using Renting.Match.Flags;
-using Renting.Match.Models;
+﻿using Renting.Match.Models;
 using Renting.Match.Services;
 using Command.Extension;
 using Renting.Infrastructure.Flags;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
+using Renting.Match.Share.Handlers;
 
 namespace Renting.Match
 {
@@ -16,15 +14,17 @@ namespace Renting.Match
 	/// @source : 
 	/// @des : 
 	/// </summary>
-	public class DefaultMatchCore
+	public class NewHouseMatchHandler : INewHouseMatchHandler
     {
         private readonly IHouseService houseService;
         private readonly IServiceProvider serviceProvider;
+        private readonly ICommonMatchHandler commonMatchHandler;
 
-        public DefaultMatchCore(IHouseService houseService, IServiceProvider serviceProvider)
+        public NewHouseMatchHandler(IHouseService houseService, IServiceProvider serviceProvider, ICommonMatchHandler commonMatchHandler)
         {
             this.houseService = houseService;
             this.serviceProvider = serviceProvider;
+            this.commonMatchHandler = commonMatchHandler;
         }
 
         public async Task Run(Guid houseId)
@@ -40,7 +40,12 @@ namespace Renting.Match
             object impl = serviceProvider.GetService(implimplAttribute.ImplType);
 
             // 找到对应的处理器进行处理
-            await (impl as IMatchHandler).Run(house);
+            Tenancy[] tenancies = await (impl as IMatchHandler).Run(house);
+
+            foreach (var item in tenancies)
+            {
+                await commonMatchHandler.Run(house, item);
+            }
 
         }
 

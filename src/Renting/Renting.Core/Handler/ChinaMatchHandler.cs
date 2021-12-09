@@ -20,15 +20,15 @@ namespace Renting.Match.Handler
 	/// @source : 
 	/// @des : 中国地区匹配
 	/// </summary>
-	public class ChinaMatchHandler : IChinaMatchHandler
+	public abstract class ChinaMatchHandler : IChinaMatchHandler
     {
         private readonly IHouseMatchStrategy houseMatchStrategy;
         private readonly IServiceProvider serviceProvider;
 
-        public ChinaMatchHandler(IHouseMatchStrategy houseMatchStrategy, IServiceProvider serviceProvider)
+        public ChinaMatchHandler(IServiceProvider serviceProvider)
         {
-            this.houseMatchStrategy = houseMatchStrategy;
             this.serviceProvider = serviceProvider;
+            this.houseMatchStrategy = GetStrategy(serviceProvider);
         }
 
         public async Task<Tenancy[]> Run(House house)
@@ -76,6 +76,8 @@ namespace Renting.Match.Handler
             #endregion
 
         }
+
+        protected abstract IHouseMatchStrategy GetStrategy(IServiceProvider serviceProvider);
 
         /// <summary>
         /// 获取符合的求租
