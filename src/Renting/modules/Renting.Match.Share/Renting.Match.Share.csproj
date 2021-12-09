@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\core\Renting.Infrastructure\Renting.Infrastructure.csproj" />
-    <ProjectReference Include="..\Renting.Reward.Share\Renting.Reward.Share.csproj" />
   </ItemGroup>
 
 </Project>

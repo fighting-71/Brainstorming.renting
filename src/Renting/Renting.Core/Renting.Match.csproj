@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\core\Renting.Infrastructure\Renting.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\Renting.Match.Share\Renting.Match.Share.csproj" />
   </ItemGroup>
 
 </Project>

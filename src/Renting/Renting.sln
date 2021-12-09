@@ -1,19 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31815.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renting.Match", "Renting.Core\Renting.Match.csproj", "{A32A1957-1CDF-4F4D-A06B-01B9C64AC5A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Renting.Match", "Renting.Core\Renting.Match.csproj", "{A32A1957-1CDF-4F4D-A06B-01B9C64AC5A9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{13764D92-FD2D-4E83-AD0A-E7E3DCDBA7BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renting.Reward", "modules\Renting.RewardModule\Renting.Reward.csproj", "{199B31E1-695C-4658-A125-F803CCCA4165}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Renting.Reward", "modules\Renting.RewardModule\Renting.Reward.csproj", "{199B31E1-695C-4658-A125-F803CCCA4165}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{7695A7BC-CC21-4D29-8FD5-564004E6CA8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renting.Extension", "core\Renting.Extension\Renting.Extension.csproj", "{EC77D302-8B42-4480-AA96-010D0E5DA438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Renting.Extension", "core\Renting.Extension\Renting.Extension.csproj", "{EC77D302-8B42-4480-AA96-010D0E5DA438}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renting.Infrastructure", "core\Renting.Infrastructure\Renting.Infrastructure.csproj", "{5C952CFB-4BDA-4471-8B7F-EABEE8E3339B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Renting.Infrastructure", "core\Renting.Infrastructure\Renting.Infrastructure.csproj", "{5C952CFB-4BDA-4471-8B7F-EABEE8E3339B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renting.Match.Share", "modules\Renting.Match.Share\Renting.Match.Share.csproj", "{CEA58F75-B0EC-4A6A-957F-8418C4B45632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renting.Reward.Share", "modules\Renting.Reward.Share\Renting.Reward.Share.csproj", "{7F17BBCD-9B6F-42AB-9A0D-615D5D0E1967}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{5C952CFB-4BDA-4471-8B7F-EABEE8E3339B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C952CFB-4BDA-4471-8B7F-EABEE8E3339B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C952CFB-4BDA-4471-8B7F-EABEE8E3339B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEA58F75-B0EC-4A6A-957F-8418C4B45632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA58F75-B0EC-4A6A-957F-8418C4B45632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA58F75-B0EC-4A6A-957F-8418C4B45632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA58F75-B0EC-4A6A-957F-8418C4B45632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F17BBCD-9B6F-42AB-9A0D-615D5D0E1967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F17BBCD-9B6F-42AB-9A0D-615D5D0E1967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F17BBCD-9B6F-42AB-9A0D-615D5D0E1967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F17BBCD-9B6F-42AB-9A0D-615D5D0E1967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 		{199B31E1-695C-4658-A125-F803CCCA4165} = {13764D92-FD2D-4E83-AD0A-E7E3DCDBA7BA}
 		{EC77D302-8B42-4480-AA96-010D0E5DA438} = {7695A7BC-CC21-4D29-8FD5-564004E6CA8D}
 		{5C952CFB-4BDA-4471-8B7F-EABEE8E3339B} = {7695A7BC-CC21-4D29-8FD5-564004E6CA8D}
+		{CEA58F75-B0EC-4A6A-957F-8418C4B45632} = {13764D92-FD2D-4E83-AD0A-E7E3DCDBA7BA}
+		{7F17BBCD-9B6F-42AB-9A0D-615D5D0E1967} = {13764D92-FD2D-4E83-AD0A-E7E3DCDBA7BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {372589DF-E5D1-4D38-99E0-B46DA427AFA1}
